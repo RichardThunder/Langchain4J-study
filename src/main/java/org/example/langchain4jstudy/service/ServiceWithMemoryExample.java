@@ -6,14 +6,9 @@ import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.model.chat.request.ResponseFormat;
 import dev.langchain4j.model.googleai.GoogleAiGeminiChatModel;
 import dev.langchain4j.service.AiServices;
-import dev.langchain4j.service.UserMessage;
-import dev.langchain4j.store.memory.chat.ChatMemoryStore;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
-import org.example.langchain4jstudy.service.Assistant;
-@Slf4j
 @Service
 public class ServiceWithMemoryExample {
     @Value("${langchain4j.google-ai.chat-model.model-name}")
