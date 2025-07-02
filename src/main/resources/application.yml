@@ -1,0 +1,22 @@
+langchain4j:
+  # Google AI Gemini 配置
+  google-ai:
+    api-key: ${GEMINI_API_KEY} # 从环境变量获取 Google AI Gemini API Key
+    chat-model:
+      model-name: gemini-2.0-flash # 要使用的 Gemini 模型名称
+#      model-name: gemini-1.5-pro # 要使用的 Gemini 模型名称
+      #log-requests: true # 打印请求日志 (可选)
+      #log-responses: true # 打印响应日志 (可选)
+      #temperature: 0.7 # 模型温度/创造性 (可选，默认通常是 0.7)
+      #top-k: 32 # 采样参数，用于控制输出多样性 (可选)
+      #top-p: 1.0 # 采样参数，用于控制输出多样性 (可选)
+      #max-output-tokens: 2048 # 最大输出 tokens 数量 (可选)
+      #timeout: 60s # 请求超时时间 (可选)
+
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/LangChain4j
+    username: richard
+    password: 12345678
+    driver-class-name: org.postgresql.Driver
