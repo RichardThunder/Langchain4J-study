@@ -53,10 +53,8 @@ public class ServiceWithMemoryExample {
         String answer = assistant.chat("Hello! My name is Klaus.");
         System.out.println(answer); // Hello Klaus! How can I assist you today?
 
-        String answerWithName = assistant.chat("What is my name?");
 
-
-        return answerWithName;
+        return assistant.chat("What is my name?");
 
     }
 }

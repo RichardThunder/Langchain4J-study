@@ -1,27 +1,19 @@
 package org.example.langchain4jstudy.controller;
 
 import dev.langchain4j.memory.ChatMemory;
+import dev.langchain4j.memory.chat.MessageWindowChatMemory;
 import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.model.chat.StreamingChatModel;
-
-
-import java.util.concurrent.CompletableFuture;
-
 import dev.langchain4j.model.chat.response.ChatResponse;
 import dev.langchain4j.model.chat.response.StreamingChatResponseHandler;
-import dev.langchain4j.model.googleai.GoogleAiGeminiChatModel;
-import dev.langchain4j.service.AiServices;
+import lombok.extern.slf4j.Slf4j;
 import org.example.langchain4jstudy.service.*;
-import dev.langchain4j.memory.chat.MessageWindowChatMemory;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import lombok.extern.slf4j.Slf4j;
+import java.util.concurrent.CompletableFuture;
 
 @Slf4j
 @RestController
